@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  #backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: shopper_backend
+    ports:
+      - "3333:3333"
+    volumes:
+      - ./backend:/usr/src/app
+    environment:
+      NODE_ENV: development
+    command: "node ace serve"
+    networks:
+      - backend-network
+  db:
+    image: mysql:latest
+    container_name: shopper-mysql
+    volumes:
+      - ./docker/mysql/dbdata:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: shopper
+      MYSQL_PASSWORD: developer
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
+    driver: bridge

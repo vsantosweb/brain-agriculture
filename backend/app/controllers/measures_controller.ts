@@ -7,7 +7,6 @@ import ImageUploader from '../traits/ImageUploader.js';
 import { createMeasureValidator } from '#validators/measure';
 import GeminiService from '#services/gemini_service'
 import { errors } from '@vinejs/vine';
-import logger from '@adonisjs/core/services/logger';
 
 
 export default class MeasuresController {
@@ -45,17 +44,11 @@ export default class MeasuresController {
         request.input('measure_type')
       );
 
-      if (checkCurrentMeasure) {
-        
-        logger.info('Já existe uma leitura para este tipo no mês atual.')
-
-        return  {
-          error_code: 'DOUBLE_REPORT',
-          error_description: 'Já existe uma leitura para este tipo no mês atual.'
-        }
+      if (checkCurrentMeasure) return {
+        error_code: 'DOUBLE_REPORT',
+        error_description: 'Já existe uma leitura para este tipo no mês atual.'
       }
-
-
+      
       const imageUploader = new ImageUploader();
 
       const uploadedImage = await imageUploader

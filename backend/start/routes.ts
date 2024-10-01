@@ -12,10 +12,12 @@ import router from '@adonisjs/core/services/router'
 const MeasuresController = () => import('#controllers/measures_controller')
 const CustomersController = () => import('#controllers/customers_controller')
 
+router.get('/', () => 'Server is runnnig...');
+
 router.group(() => {
 
-    router.resource('measures', MeasuresController)
+    router.resource('measures', MeasuresController);
+    router.resource('customers', CustomersController);
+    router.get('customers/:uuid/measures', [CustomersController, 'measures']);
 
-    router.resource('customers', CustomersController)
-    router.get('customers/:uuid/measures', [CustomersController, 'measures'])
 }).prefix('api')

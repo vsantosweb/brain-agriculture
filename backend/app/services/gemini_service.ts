@@ -6,7 +6,7 @@ export default class GeminiService {
 
   protected fileManager: any;
   protected model: any;
-  declare image?: string | null;
+  protected image?: string | null;
 
   constructor() {
 
