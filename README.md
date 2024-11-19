@@ -1,5 +1,5 @@
 
-# Measure App
+# Brain Agriculture
 
 Este é um projeto desenvolvido em AdonisJS configurado para rodar em ambiente de desenvolvimento local.
 
@@ -8,4 +8,4 @@ Este é um projeto desenvolvido em AdonisJS configurado para rodar em ambiente d
 Para iniciar o projeto, execute o seguinte comando na raiz:
 
 ```bash
-docker compose up
+docker compose up --build
