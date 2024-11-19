@@ -11,7 +11,7 @@ tmp
 
 # Frontend assets compiled code
 public/assets
-docker/postgresql
+
 # Build tools specific
 npm-debug.log
 yarn-error.log
@@ -23,5 +23,3 @@ yarn-error.log
 
 # Platform specific
 .DS_Store
-
-storage

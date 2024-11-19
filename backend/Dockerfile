@@ -9,7 +9,11 @@ WORKDIR /usr/src/app
 # Install dependencies
 COPY package*.json ./
 
-RUN npm ci --production
+# Instalar as dependências do projeto usando npm
+RUN npm install
+
+# Copie o restante do código da aplicação para dentro do container
+COPY . .
 
 # Build app
 #RUN npm run build --production

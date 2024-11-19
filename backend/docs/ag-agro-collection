@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "cea226ea-3a6d-4421-b88c-bf9d36e6fcdd",
+		"name": "Ag Agro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6202872"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:3333/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3333/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3333/customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"name\",\r\n    \"document\": \"document\",\r\n    \"farm_name\": \"farm_name\",\r\n    \"city\": \"city\",\r\n    \"state\": \"state\",\r\n    \"farm_area\": 10,\r\n    \"cultivable_area\": 50,\r\n    \"vegetation_area\": 25,\r\n    \"crops\": [1, 2, 5]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3333/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3333/customers",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"document\": \"115454878999\",\r\n    \"farm_name\": \"Fazendinha 123\",\r\n    \"city\": \"São Paulo\",\r\n    \"state\": \"SP\",\r\n    \"farm_area\": 10,\r\n    \"cultivable_area\": 50,\r\n    \"vegetation_area\": 25,\r\n    \"crops\": [1, 2, 3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3333/customers/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:3333/customers",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"name\",\r\n    \"document\": \"document\",\r\n    \"farm_name\": \"farm_name\",\r\n    \"city\": \"city\",\r\n    \"state\": \"state\",\r\n    \"farm_area\": 10,\r\n    \"cultivable_area\": 50,\r\n    \"vegetation_area\": 25,\r\n    \"crops\": [1, 2, 5]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3333/customers/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Summary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3333/customers/summary",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"customers",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By State",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3333/customers/by-state",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"customers",
+						"by-state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gey by Crops",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3333/customers/by-state",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3333",
+					"path": [
+						"customers",
+						"by-state"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

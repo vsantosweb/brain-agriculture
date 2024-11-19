@@ -14,13 +14,6 @@ const loggerConfig = defineConfig({
       enabled: true,
       name: env.get('APP_NAME'),
       level: env.get('LOG_LEVEL'),
-      driver: 'file',
-      file: {
-        filename: 'storage/logs/app.log',
-        level: 'info', 
-        maxSize: '10mb', 
-        maxFiles: '14d', 
-      },
       transport: {
         targets: targets()
           .pushIf(!app.inProduction, targets.pretty())
