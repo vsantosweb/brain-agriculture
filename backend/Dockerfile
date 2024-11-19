@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Instalar as dependências do projeto usando npm
-RUN npm install
+RUN npm install --verbose
 
 # Copie o restante do código da aplicação para dentro do container
 COPY . .
