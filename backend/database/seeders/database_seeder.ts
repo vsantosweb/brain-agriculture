@@ -13,7 +13,6 @@ export default class extends BaseSeeder {
 
       const random = Math.floor(Math.random() * (1 - 5 + 1)) + 5;
 
-      console.log(random, 'random')
       const crops = await CropType.query()
         .orderByRaw('RANDOM()')
         .limit(random);

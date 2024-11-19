@@ -5,6 +5,11 @@
 WORKDIR=/usr/src/app
 cd $WORKDIR
 
+if [ ! -d "node_modules" ]; then
+    echo "Aguardando instalação de dependências..."
+    npm install
+fi
+
 # Executa os comandos necessários
 cp .env.example .env
 
@@ -17,3 +22,6 @@ node ace migration:fresh --seed
 echo "Iniciando a aplicação..."
 node ace serve --watch
 
+
+
+exec "$@"
