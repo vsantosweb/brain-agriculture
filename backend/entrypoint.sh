@@ -11,6 +11,7 @@ cp .env.example .env
 node ace generate:key
 node ace migration:status
 node ace list:routes 
+node ace migration:fresh --seed
 
 # Inicie a aplicação
 echo "Iniciando a aplicação..."
